@@ -32,8 +32,10 @@
         @test prefixsum(f1, 3) == 3
         @test prefixsum(f1, 7) == 5
 
+        @test prefixsum(f1, 0) == 0
+        @test prefixsum(f1, -100) == 0
+
         @test_throws ArgumentError inc!(f1, 11)
-        @test_throws ArgumentError inc!(f1, 0)
     end
 
 end
